@@ -12,6 +12,7 @@
 		6313C3BE1D5E48C20087F6FF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3BC1D5E48C20087F6FF /* Main.storyboard */; };
 		6313C3C01D5E48C20087F6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3BF1D5E48C20087F6FF /* Assets.xcassets */; };
 		6313C3C31D5E48C20087F6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3C11D5E48C20087F6FF /* LaunchScreen.storyboard */; };
+		6313C3CB1D5E49D20087F6FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3CA1D5E49D20087F6FF /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		6313C3BF1D5E48C20087F6FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6313C3C21D5E48C20087F6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6313C3C41D5E48C20087F6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6313C3CA1D5E49D20087F6FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,7 @@
 				6313C3BF1D5E48C20087F6FF /* Assets.xcassets */,
 				6313C3C11D5E48C20087F6FF /* LaunchScreen.storyboard */,
 				6313C3C41D5E48C20087F6FF /* Info.plist */,
+				6313C3CA1D5E49D20087F6FF /* GoogleService-Info.plist */,
 			);
 			path = VRSocialApp;
 			sourceTree = "<group>";
@@ -126,6 +129,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6313C3C31D5E48C20087F6FF /* LaunchScreen.storyboard in Resources */,
+				6313C3CB1D5E49D20087F6FF /* GoogleService-Info.plist in Resources */,
 				6313C3C01D5E48C20087F6FF /* Assets.xcassets in Resources */,
 				6313C3BE1D5E48C20087F6FF /* Main.storyboard in Resources */,
 			);
