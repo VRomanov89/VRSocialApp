@@ -13,6 +13,10 @@
 		6313C3C01D5E48C20087F6FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3BF1D5E48C20087F6FF /* Assets.xcassets */; };
 		6313C3C31D5E48C20087F6FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3C11D5E48C20087F6FF /* LaunchScreen.storyboard */; };
 		6313C3CB1D5E49D20087F6FF /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6313C3CA1D5E49D20087F6FF /* GoogleService-Info.plist */; };
+		6313C3D11D5E8A080087F6FF /* ExtendedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313C3D01D5E8A080087F6FF /* ExtendedView.swift */; };
+		6313C3D41D5E8A670087F6FF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313C3D31D5E8A670087F6FF /* Constants.swift */; };
+		6313C3D61D5E8B830087F6FF /* ExtendedButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313C3D51D5E8B830087F6FF /* ExtendedButton.swift */; };
+		6313C3D81D5E8CBB0087F6FF /* ExtendedField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6313C3D71D5E8CBB0087F6FF /* ExtendedField.swift */; };
 		88AF910048C8C18F37100167 /* Pods_VRSocialApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 83FFC37FAF1D0CF6F3666BCD /* Pods_VRSocialApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +31,10 @@
 		6313C3C21D5E48C20087F6FF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6313C3C41D5E48C20087F6FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6313C3CA1D5E49D20087F6FF /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6313C3D01D5E8A080087F6FF /* ExtendedView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedView.swift; sourceTree = "<group>"; };
+		6313C3D31D5E8A670087F6FF /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		6313C3D51D5E8B830087F6FF /* ExtendedButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedButton.swift; sourceTree = "<group>"; };
+		6313C3D71D5E8CBB0087F6FF /* ExtendedField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtendedField.swift; sourceTree = "<group>"; };
 		83FFC37FAF1D0CF6F3666BCD /* Pods_VRSocialApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_VRSocialApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -75,6 +83,7 @@
 				6313C3CD1D5E778C0087F6FF /* 02. View */,
 				6313C3CE1D5E77940087F6FF /* 03. Controller */,
 				6313C3CF1D5E77B10087F6FF /* 04. Supporting Files */,
+				6313C3D21D5E8A540087F6FF /* 05. Utilities */,
 				6313C3BC1D5E48C20087F6FF /* Main.storyboard */,
 			);
 			path = VRSocialApp;
@@ -90,6 +99,9 @@
 		6313C3CD1D5E778C0087F6FF /* 02. View */ = {
 			isa = PBXGroup;
 			children = (
+				6313C3D01D5E8A080087F6FF /* ExtendedView.swift */,
+				6313C3D51D5E8B830087F6FF /* ExtendedButton.swift */,
+				6313C3D71D5E8CBB0087F6FF /* ExtendedField.swift */,
 			);
 			name = "02. View";
 			sourceTree = "<group>";
@@ -112,6 +124,14 @@
 				6313C3C11D5E48C20087F6FF /* LaunchScreen.storyboard */,
 			);
 			name = "04. Supporting Files";
+			sourceTree = "<group>";
+		};
+		6313C3D21D5E8A540087F6FF /* 05. Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				6313C3D31D5E8A670087F6FF /* Constants.swift */,
+			);
+			name = "05. Utilities";
 			sourceTree = "<group>";
 		};
 		7DAD80C38CB76FD143112831 /* Pods */ = {
@@ -249,8 +269,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6313C3D11D5E8A080087F6FF /* ExtendedView.swift in Sources */,
+				6313C3D81D5E8CBB0087F6FF /* ExtendedField.swift in Sources */,
 				6313C3BB1D5E48C20087F6FF /* SignInVC.swift in Sources */,
 				6313C3B91D5E48C20087F6FF /* AppDelegate.swift in Sources */,
+				6313C3D61D5E8B830087F6FF /* ExtendedButton.swift in Sources */,
+				6313C3D41D5E8A670087F6FF /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
