@@ -5,5 +5,7 @@ use_frameworks!
 
 target 'VRSocialApp' do
 pod 'Firebase'
+pod 'Firebase/Auth'
+pod 'FBSDKLoginKit'
 end
 

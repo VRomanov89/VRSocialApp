@@ -82,3 +82,14 @@ strip_invalid_archs() {
   fi
 }
 
+
+if [[ "$CONFIGURATION" == "Debug" ]]; then
+  install_framework "Pods-VRSocialApp/Bolts.framework"
+  install_framework "Pods-VRSocialApp/FBSDKCoreKit.framework"
+  install_framework "Pods-VRSocialApp/FBSDKLoginKit.framework"
+fi
+if [[ "$CONFIGURATION" == "Release" ]]; then
+  install_framework "Pods-VRSocialApp/Bolts.framework"
+  install_framework "Pods-VRSocialApp/FBSDKCoreKit.framework"
+  install_framework "Pods-VRSocialApp/FBSDKLoginKit.framework"
+fi
