@@ -12,6 +12,12 @@ import FBSDKLoginKit
 import Firebase
 
 class SignInVC: UIViewController {
+    
+    @IBOutlet weak var emailField: ExtendedField!
+    @IBOutlet weak var passField: ExtendedField!
+    
+    
+    
     @IBAction func facebookButton(_ sender: ExtendedButton) {
         let facebookLogin = FBSDKLoginManager()
         facebookLogin.logIn(withReadPermissions: ["email"], from: self) { (result, error) in
@@ -27,6 +33,18 @@ class SignInVC: UIViewController {
         }
     }
 
+    @IBAction func signInButton(_ sender: ExtendedButton) {
+        if let email = emailField.text, let pass = passField.text {
+            FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
+                if error == nil {
+                    print("##### VLAD ##### We were able to authenticate with Firebase!")
+                } else {
+                    print("##### VLAD ##### We were unable to login with Firebase!")
+                }
+            })
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
