@@ -40,6 +40,15 @@ class SignInVC: UIViewController {
                     print("##### VLAD ##### We were able to authenticate with Firebase!")
                 } else {
                     print("##### VLAD ##### We were unable to login with Firebase!")
+                    
+                    //Need to create user
+                    FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
+                        if error != nil {
+                            print("##### VLAD ##### We were unable to create an account with Firebase! Error \(error.debugDescription)")
+                        } else {
+                            print("##### VLAD ##### We were able to authenticate with Firebase! ")
+                        }
+                    })
                 }
             })
         }
