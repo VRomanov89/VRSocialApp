@@ -7,5 +7,6 @@ target 'VRSocialApp' do
 pod 'Firebase'
 pod 'Firebase/Auth'
 pod 'FBSDKLoginKit'
+pod 'SwiftKeychainWrapper'
 end
 

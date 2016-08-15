@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Firebase
+import SwiftKeychainWrapper
 
 class SignInVC: UIViewController {
     
@@ -38,8 +39,11 @@ class SignInVC: UIViewController {
             FIRAuth.auth()?.signIn(withEmail: email, password: pass, completion: { (user, error) in
                 if error == nil {
                     print("##### VLAD ##### We were able to authenticate with Firebase!")
+                    if let user = user {
+                        self.completeSignIn(id: user.uid)
+                    }
                 } else {
-                    print("##### VLAD ##### We were unable to login with Firebase!")
+                    print("##### VLAD ##### We were unable to login with Firebase! Error: \(error.debugDescription)")
                     
                     //Need to create user
                     FIRAuth.auth()?.createUser(withEmail: email, password: pass, completion: { (user, error) in
@@ -47,6 +51,9 @@ class SignInVC: UIViewController {
                             print("##### VLAD ##### We were unable to create an account with Firebase! Error \(error.debugDescription)")
                         } else {
                             print("##### VLAD ##### We were able to authenticate with Firebase! ")
+                            if let user = user {
+                                self.completeSignIn(id: user.uid)
+                            }
                         }
                     })
                 }
@@ -56,7 +63,14 @@ class SignInVC: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        //Check if the user is already authenticated before showing the screen.
+        if let _ = KeychainWrapper.stringForKey(KEY_UID) {
+            performSegue(withIdentifier: "goToFeed", sender: self)
+            print("##### VLAD ##### Already authenticated! ")
+        }
     }
     
     func firebaseAuth(_ credential: FIRAuthCredential) {
@@ -65,8 +79,17 @@ class SignInVC: UIViewController {
                 print("##### VLAD ##### We were unable to login with Firebase!")
             } else {
                 print("##### VLAD ##### We were ABLE to login with Firebase!")
+                if let user = user {
+                    self.completeSignIn(id: user.uid)
+                }
             }
         })
+    }
+    
+    func completeSignIn(id: String) {
+        let keychainResult = KeychainWrapper.setString(id, forKey: KEY_UID)
+        print("##### VLAD ##### Data saved to keychain: \(keychainResult)")
+        performSegue(withIdentifier: "goToFeed", sender: self)
     }
 }
 

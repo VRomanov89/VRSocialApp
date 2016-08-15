@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'B37928F0D361B26BE80E7AE8'
+               BlueprintIdentifier = '55956984944A5D2C336942FF'
                BlueprintName = 'Pods-VRSocialApp'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'Pods_VRSocialApp.framework'>

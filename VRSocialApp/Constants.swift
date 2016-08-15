@@ -10,3 +10,5 @@ import Foundation
 import UIKit
 
 let COLOR_SHADOW: CGFloat = 128 / 255
+
+let KEY_UID = "uid"
